@@ -1,0 +1,67 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>Zadaca -2a</title>
+</head>
+<body>
+    <canvas
+        id="canvasId"
+        style="background-color: rgba(158, 167, 184, 0.2);"
+        height="500"
+        width="500">
+    </canvas>
+</body>
+<script>
+    draw();
+    function draw() {
+        var canvas = document.getElementById('canvasId');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            //"camac"
+            ctx.beginPath();            
+            ctx.moveTo(150, 450);
+            ctx.lineTo(350, 450);
+            ctx.lineTo(400, 400);
+            ctx.lineTo(100, 400);
+            ctx.lineTo(150, 450);
+            ctx.fillStyle = "gray",
+            ctx.fill();
+            ctx.stroke();
+            //stup
+            ctx.beginPath();
+            ctx.rect(270, 200, 3, 200);
+            ctx.fillStyle = "black",
+            ctx.fill();
+            //zastavica            
+            ctx.beginPath();
+            ctx.moveTo(272,201)
+            ctx.lineTo(290, 220);
+            ctx.lineTo(272, 240);
+            ctx.lineWidth=3;
+            ctx.stroke()
+            ctx.fillStyle = "gray",
+            ctx.fill();     
+            //prednji jarbol
+            ctx.beginPath();
+            ctx.lineWidth=1;
+            ctx.moveTo(110, 390);
+            ctx.lineTo(260, 390);
+            ctx.lineTo(260, 210);
+            ctx.lineTo(110, 390);
+            ctx.stroke();
+            ctx.fillStyle = "lightgray",
+            ctx.fill();
+            // zadnji jarbol
+            ctx.beginPath();
+            ctx.moveTo(282, 390);
+            ctx.lineTo(282, 250);
+            ctx.lineTo(370, 390);
+            ctx.lineTo(282, 390);
+            ctx.stroke();
+            ctx.fill();
+            
+        }
+    }
+</script>
+</html>
