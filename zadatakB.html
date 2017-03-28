@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>Zadaca -2a</title>
+</head>
+
+<body>
+    <canvas id="canvasId" style="background-color: rgba(158, 167, 184, 0.2);" height="500" width="500">
+    </canvas>
+</body>
+<script>
+    draw();
+    function draw() {
+        var canvas = document.getElementById('canvasId');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+
+            // kuca donji dio
+            ctx.beginPath();
+            ctx.rect(100, 300, 100, 100);
+            ctx.fillStyle = "white";
+            ctx.fill();
+            ctx.stroke();
+            // kuca krov
+            ctx.beginPath();
+            ctx.moveTo(95, 297);
+            ctx.lineTo(205, 297);
+            ctx.lineTo(150, 250);
+            ctx.lineTo(95, 297);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.stroke();
+            //drvo deblo
+            ctx.beginPath();
+            ctx.rect(300, 330, 20, 70);
+            ctx.fillStyle = "brown";
+            ctx.fill();
+            ctx.stroke();
+            // drvo krošnja
+            ctx.beginPath();
+            ctx.arc(310, 290, 40, 0, 2 * Math.PI);
+            ctx.fillStyle = "green";
+            ctx.fill();
+            ctx.stroke();
+
+        }
+    }
+
+</script>
+
+</html>
